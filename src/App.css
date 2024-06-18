@@ -35,3 +35,7 @@ input,
 .login-button{
   cursor: pointer;
 }
+.google_login{
+  width: 10px;
+  margin: auto;
+}
