@@ -1,25 +1,10 @@
-.App {
-  background-color: rgb(237, 193, 135);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
-}
+
 .signup-page{
   width: 30rem;
   height: 20rem;
   background-color: rgb(88, 221, 99);
 }
-.Signup-form, .Login-form{
-  width: 25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 2.5rem;
-  background-color: rgb(110, 210, 226);
-}
+
 .form-outline{
   width: 30rem;
   height:20rem;
@@ -34,8 +19,4 @@ input,
 .signup-button,
 .login-button{
   cursor: pointer;
-}
-.google_login{
-  width: 10px;
-  margin: auto;
 }
