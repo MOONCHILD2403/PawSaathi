@@ -1,65 +1,97 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import React, { useState } from 'react'
-import {auth} from '../firebase'
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { GoogleLogin } from '@react-oauth/google';
+import { FcGoogle } from 'react-icons/fc';
+import { FaFacebookF, FaApple } from 'react-icons/fa';
+import './Signup.css'; 
+import pawsaathiLogo from './pawsaathi.png';
+
+
 const Signup = () => {
-   
-  const [email,setEmail] = useState('');
-  const [password,setPassword] = useState('');
-  
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) =>{
-    e.preventDefault();
-    try {
-      const userCredentials = await createUserWithEmailAndPassword(auth,email,password)
-      console.log(userCredentials)
-      const user = userCredentials.user;
-      localStorage.setItem('token',user.accessToken);
-      localStorage.setItem('user',JSON.stringify(user));
-      navigate("/");
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+  }, []);
 
-    } catch (error) {
-      console.error(error);
-      
-    }
-  }
+  const handleNameChange = (e) => setName(e.target.value);
+  const handlePhoneChange = (e) => setPhone(e.target.value);
+  const handleEmailChange = (e) => setEmail(e.target.value);
+  const handlePasswordChange = (e) => setPassword(e.target.value);
+
+  const handleGenerateOTP = () => {
+    // Handle OTP generation
+    console.log('Generating OTP for', name, phone);
+  };
+
+  const handleSocialLogin = (platform) => {
+    // Handle social login
+    console.log(`Logging in with ${platform}`);
+  };
 
   return (
-    <><meta name="google-signin-client_id" content="153653751627-ekfrl8i33l5pctd36lg0bdgb04u6v9qc.apps.googleusercontent.com"></meta><div className='signup-page'>
-      <h1>Signup Page</h1>
-      <div className='form-outline'>
-        <form onSubmit={handleSubmit} className='Signup-form'>
-          <input
-            type="email"
-            placeholder="Your Email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)} />
-
-          <input
-            type="password"
-            placeholder="Your Password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)} />
-          <button type='submit' className='signup-button'> Signup </button>
-        </form>
-        <div className = 'google_login'>
-          <GoogleLogin                                              //google login function
-            onSuccess={credentialResponse => {
-              console.log(credentialResponse);
-            }}
-            onError={() => {
-              console.log('Login Failed');
-            }}
-          />;
+    <div className='body'>
+      <div className="signup-container">
+        <div className="logo">
+          <img src={pawsaathiLogo} alt="Pawsaathi" />
+          <h2>pawsaathi</h2>
+        </div>  
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={name}
+          onChange={handleNameChange}
+          className="input-field"
+        />
+        <input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={handleEmailChange}
+          className="input-field"
+        />
+        <input
+          type="password"
+          placeholder="Enter your password"
+          value={password}
+          onChange={handlePasswordChange}
+          className="input-field"
+        />
+        <input
+          type="tel"
+          placeholder="+91 98925XXXXX"
+          value={phone}
+          onChange={handlePhoneChange}
+          className="input-field"
+        />
+        
+        <button onClick={handleGenerateOTP} className="otp-button">Generate OTP</button>
+        <div className="divider">or continue with</div>
+        <div className="social-login">
+          <button onClick={() => handleSocialLogin('Facebook')} className="social-button facebook">
+            <FaFacebookF className="social-icon" />
+          </button>
+          <button onClick={() => handleSocialLogin('Google')} className="social-button google">
+            <FcGoogle className="social-icon" />
+          </button>
+          <button onClick={() => handleSocialLogin('Apple')} className="social-button apple">
+            <FaApple className="social-icon" />
+          </button>
         </div>
-        <p>Already Registered? <Link to="/login">Login</Link></p>
+        <div className="footer">
+          <button className="skip-button">I'll do it later</button>
+          <p>Already have an account? <Link to="/signin">Sign in</Link></p>
+        </div>
       </div>
-    </div></>
-  )
+    </div>
+  );
 }
 
-export default Signup
+export default Signup;
