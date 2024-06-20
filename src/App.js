@@ -11,8 +11,7 @@ function App() {
       <div className="App">
         <Outlet />
       </div>
-        <Signup />
-      </GoogleOAuthProvider>
+    </GoogleOAuthProvider>
   );
 }
 

@@ -87,7 +87,7 @@ const Signup = () => {
         </div>
         <div className="footer">
           <button className="skip-button">I'll do it later</button>
-          <p>Already have an account? <Link to="/signin">Sign in</Link></p>
+          <p>Already have an account? <Link to="/Login">Sign in</Link></p>
         </div>
       </div>
     </div>

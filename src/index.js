@@ -9,7 +9,7 @@ import{
   Route,
 } from "react-router-dom";
 import Protected from './components/Protected';
-import Login from './pages/Signup';
+import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
 import Signup2 from './pages/Signup2';
