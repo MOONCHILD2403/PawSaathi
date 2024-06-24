@@ -1,6 +1,6 @@
 import React from 'react';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import Signup from './pages/Signup'; 
+//import Signup from './pages/Signup'; 
 import { Outlet } from 'react-router-dom';
 import './App.css';
 

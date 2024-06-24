@@ -29,6 +29,8 @@ const Signup = () => {
   const handleGenerateOTP = () => {
     // Handle OTP generation
     console.log('Generating OTP for', name, phone);
+
+    navigate('/signup2');
   };
 
   const handleSocialLogin = (platform) => {

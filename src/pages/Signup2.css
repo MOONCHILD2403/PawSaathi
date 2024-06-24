@@ -1,0 +1,156 @@
+.body {
+    font-family: 'Arial', sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    max-height: 100vh;
+    background-color: #ffffff;
+    background-image: url('https://www.shutterstock.com/image-vector/paw-continuous-line-drawing-one-600nw-2299713385.jpg');
+    background-size: cover; 
+    background-size: 100vw 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.signup-container {
+    background: #fbf4dd;
+    display: grid;
+    padding: 2em;
+    border-radius: 2em;
+    align-items: center;
+    box-shadow: 12px 30px 25px rgba(0, 0, 82, 0.1);
+    text-align: center;
+    justify-content: center;
+    width: 30vb;
+    height: 80vh;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.logo img {
+    width: 2.5rem;
+    margin-right: 0.3em;
+}
+
+h2 {
+    color: #cb3123;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+h5 {
+    color: rgb(246, 128, 128);
+    margin: 0;
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+    padding: 0em;
+}
+
+p {
+    color: #333;
+    margin: 0.4em 0;
+    font-size: 0.8em;
+    color: black;
+    font-weight: 100;
+    padding: 0.5em;
+}
+
+.otp-container {
+    display: flex;
+    gap: 0.8em;
+    margin: 0em 0;
+    justify-content: center;
+}
+
+.otp-field {
+    width: 1.6em;
+    height: 1.6em;
+    padding: 0.4em;
+    border: none;
+    border-radius: 0.5em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.timer p {
+    color: #333;
+    margin: 0.4em 0;
+    font-size: 0.7em;
+    color: rgb(246, 128, 128);
+    padding: 0.5em;
+}
+
+.roles {
+    text-align: left;
+    width: 100%;
+    margin: 0.5em 0;
+    margin-top: 3em;
+}
+
+.roles p {
+    margin: 0.1em 0;
+    font-size: 0.9em;
+}
+
+.checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+}
+
+.checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    background: #fff;
+    padding: 0.3em;
+    border-radius: 0.35em;
+    border: none;
+    color:rgb(133, 130, 130);
+    cursor: pointer;
+    font-size: 0.6em;
+}
+
+.checkboxes label input {
+    display: none;
+}
+
+.checkboxes label.selected {
+    background: #e34234;
+    color: #fff;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.5em;
+    background-color: #f95c4e;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 4em;
+    box-shadow: 1px 4px 5px 2px rgba(0, 0, 0, 0.144);
+}
+
+.resend {
+    color: #878383;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin: 2em;
+}
+
+.resend.red {
+    color: red;
+}
+
+.resend p {
+    color: #a8a3a3;
+}

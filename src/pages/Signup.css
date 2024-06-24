@@ -8,15 +8,15 @@
     background-color: #ffffff;
     background-image: url('https://www.shutterstock.com/image-vector/paw-continuous-line-drawing-one-600nw-2299713385.jpg');
     background-size: cover; 
-    background-size: 100% 100%;
+    background-size: 100vw 100vh;
     background-position: center;
     background-repeat: no-repeat;
   }
   .signup-container {
     background: #fbf4dd;
     display: grid;
-    padding: 40px;
-    border-radius: 20px;
+    padding: 2em;
+    border-radius: 2em;
     align-items: center;
     box-shadow: 12px 30px 25px rgba(0, 0, 82, 0.1);
     text-align: center;
@@ -30,12 +30,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 4em;
   }
   
   .logo img {
-    width: 50px;
-    margin-right: 2px;
+    width: 3rem;
+    margin-right: 0.3em;
   }
   
   h2 {
@@ -46,41 +46,41 @@
   
   .input-field {
     max-width: fit-content;
-    padding: 10px;
+    padding: 0.5em;
     text-align: center;
     margin: auto;
     border: 1px solid #fbf4dd;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 0.5em;
+    font-size: 1rem;
   }
   
   .otp-button {
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 0.6em;
+    margin-top: 0.5em;
     background-color: #e34234;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5em;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     box-shadow: 1px 4px 5px 2px rgba(0, 0, 0, 0.144);
   }
   
   .divider {
-    margin: 20px 0;
+    margin: 3em 0;
     color: #f78177;
     position: relative;
-    font-size: 13px;
+    font-size: 0.8em;
   }
   
   .divider:before, .divider:after {
     content: '';
     position: absolute;
-    top: 50%;
-    width: 20%;
-    height: 1px;
-    background: #f78177;
+    top: 0.5em;
+    width: 4em;
+    height: 0.08em;
+    background: #fb8d83;
   }
   
   .divider:before {
@@ -94,24 +94,25 @@
   .social-login {
     display: flex;
     justify-content: space-around;
-    margin: 20px 0;
+    margin: 0.1em 0;
+    margin-bottom: 1em;
   }
   
   .social-button {
     background: none;
     border: 1px solid #000000;
-    border-radius: 10px;
+    border-radius: 1em;
     cursor: pointer;
-    padding: 20px;
+    padding: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 40px;
+    width: 4em;
+    height: 2.8em;
   }
   
   .social-icon {
-    font-size: 30px;
+    font-size: 2em;
   }
   
   .social-button.facebook {
@@ -127,9 +128,9 @@
   }
   
   .footer {
-    margin-top: 20px;
+    margin-top: 2em;
     color: #aaa;
-    font-size: 14px;
+    font-size: 0.9em;
   }
   
   .skip-button {
@@ -140,7 +141,7 @@
   }
   
   .footer p {
-    margin-top: 10px;
+    margin-top: 0.5em;
     color: #000;
     font-size: smaller;
   }
@@ -148,5 +149,5 @@
   .footer a {
     color: #e63a2a;
     text-decoration: none;
-    margin-left: 2px;
+    margin-left: 0.2em;
   }
